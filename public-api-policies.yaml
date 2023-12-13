@@ -1,17 +1,30 @@
-# This file describes the possible format of the plugin operations by
-# the CLI command `deck add-plugin` etc.
+# This file describes plugin policies to enforce by default on all public APIs 
+# using CLI command `deck add-plugin`.
+# Plugins : Request Size limit + Request Rate limiting
 
 _format_version: "1.0"
 
-# plugins is an array of plugin operations, to be applied in order
-# for now only "add" is supported
 add-plugins:
   - selectors:            # defaults to ["$"]
     - "$.services[*]"
     overwrite: false      # defaults to false
     plugins:
-    - name: key-auth
+    - name: request-size-limiting
       config:
-        key_names: [api_key, apikey]
-        key_in_body: false
-        hide_credentials: true
+        allowed_payload_size: 12
+        require_content_length: false
+        size_unit: megabytes
+      enabled: true
+    - name: rate-limiting
+      config:
+        error_code: 429
+        error_message: Backend protection - API rate limit exceeded
+        fault_tolerant: true
+        hide_client_headers: false
+        hour: null
+        limit_by: service
+        minute: 13
+        policy: local
+        second: 4
+        sync_rate: -1
+      enabled: true
