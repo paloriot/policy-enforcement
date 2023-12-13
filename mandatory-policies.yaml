@@ -1,17 +1,25 @@
-# This file describes the possible format of the plugin operations by
-# the CLI command `deck add-plugin` etc.
+# This file describes plugin policies to enforce by default on all APIs 
+# using CLI command `deck add-plugin`.
+# Plugins : Logs + Prometheus
 
 _format_version: "1.0"
 
-# plugins is an array of plugin operations, to be applied in order
-# for now only "add" is supported
 add-plugins:
   - selectors:            # defaults to ["$"]
     - "$.services[*]"
     overwrite: false      # defaults to false
     plugins:
-    - name: key-auth
+    - name: file-log
       config:
-        key_names: [api_key, apikey]
-        key_in_body: false
-        hide_credentials: true
+        custom_fields_by_lua: []
+        path: /dev/stdout
+        reopen: false
+      enabled: true
+    - name: prometheus
+      config:
+        bandwidth_metrics: true
+        latency_metrics: true
+        per_consumer: true
+        status_code_metrics: true
+        upstream_health_metrics: true
+      enabled: true
