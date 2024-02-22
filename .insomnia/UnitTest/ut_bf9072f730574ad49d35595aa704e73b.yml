@@ -1,0 +1,26 @@
+_id: ut_bf9072f730574ad49d35595aa704e73b
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629033442
+created: 1708629033442
+requestId: req_e09324d18a3440e78672c4c23ade9e5b
+name: Test for PUT /user/{{ _.username }}
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  // Parse the JSON response
+  const data = JSON.parse(response.data);
+
+  // Assertions
+  expect(response.status).to.equal(200);
+  expect(response.headers['content-type']).to.equal('application/json');
+  expect(data).to.have.property('id');
+  expect(data).to.have.property('username');
+  expect(data).to.have.property('firstName');
+  expect(data).to.have.property('lastName');
+  expect(data).to.have.property('email');
+  expect(data).to.have.property('password');
+  expect(data).to.have.property('phone');
+  expect(data).to.have.property('userStatus');

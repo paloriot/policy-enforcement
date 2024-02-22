@@ -1,0 +1,28 @@
+_id: ut_b13df529cdf84738ad1e6eb9b44f7d07
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629031730
+created: 1708629031730
+requestId: req_72acf8f8b4d44de49a373671ce727a01
+name: Test for Returns pet inventories by status
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  // Parse the response body as JSON
+  const body = JSON.parse(response.data);
+
+  // Check the status code
+  expect(response.status).to.equal(200);
+
+  // Check the response time
+  expect(response.responseTime).to.be.a('number');
+
+  // Check the response body
+  expect(body).to.be.an('object');
+
+  // Check that the body has the expected properties
+  for (let key in body) {
+    expect(body[key]).to.be.a('number');
+  }

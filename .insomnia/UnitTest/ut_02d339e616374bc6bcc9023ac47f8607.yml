@@ -1,0 +1,29 @@
+_id: ut_02d339e616374bc6bcc9023ac47f8607
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629029474
+created: 1708629029474
+requestId: req_06d802fa792346148047c9b48c7366d5
+name: Find purchase order by ID
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  // Check status code
+  expect(response.status).to.equal(200);
+
+  // Parse JSON response
+  const data = JSON.parse(response.data);
+
+  // Check that the response has an orderId property
+  expect(data).to.have.property('orderId');
+
+  // Check that the orderId is a string
+  expect(data.orderId).to.be.a('string');
+
+  // Check that the response has a parentId property
+  expect(data).to.have.property('parentId');
+
+  // Check that the parentId is a string
+  expect(data.parentId).to.be.a('string');

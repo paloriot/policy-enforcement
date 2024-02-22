@@ -1,0 +1,52 @@
+_id: ut_e99f82ca13c944bb840312b81833296b
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629040524
+created: 1708629040524
+requestId: req_a2f7e87cdd374cf2805792f02052f763
+name: Deletes a pet
+code: >-
+  // Auto-generated with Insomnia AI
+
+
+  const response = await insomnia.send();
+
+
+  // Parse the response body as JSON
+
+  const body = JSON.parse(response.data);
+
+
+  // Assert that the status code is 200
+
+  expect(response.status).to.equal(200);
+
+
+  // Assert that the status message is 'OK'
+
+  expect(response.statusMessage).to.equal('OK');
+
+
+  // Assert that the response time is less than 2000ms
+
+  expect(response.responseTime).to.be.below(2000);
+
+
+  // Assert that the 'content-type' header exists
+
+  expect(response.headers).to.have.property('content-type');
+
+
+  // Assert that the 'content-type' header is 'application/json'
+
+  expect(response.headers['content-type']).to.include('application/json');
+
+
+  // Assert that the body is an object
+
+  expect(body).to.be.an('object');
+
+
+  // Assert that the body does not have a 'petId' property (since the pet was deleted)
+
+  expect(body).to.not.have.property('petId');

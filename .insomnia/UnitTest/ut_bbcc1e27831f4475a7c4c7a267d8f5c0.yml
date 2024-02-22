@@ -1,0 +1,31 @@
+_id: ut_bbcc1e27831f4475a7c4c7a267d8f5c0
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629033106
+created: 1708629033106
+requestId: req_8202d56b92054534bbf5dba41ce35664
+name: Delete user test
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  // Parse the JSON response
+  let data;
+  try {
+    data = JSON.parse(response.data);
+  } catch (e) {
+    throw new Error('Response is not a valid JSON object');
+  }
+
+  // Check the HTTP status code
+  expect(response.status).to.equal(200);
+
+  // Check the response time
+  expect(response.responseTime).to.be.a('number');
+
+  // Check the headers
+  expect(response.headers).to.be.an('object');
+
+  // Check that the response body is an object
+  expect(data).to.be.an('object');

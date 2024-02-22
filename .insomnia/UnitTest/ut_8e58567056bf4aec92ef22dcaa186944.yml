@@ -1,0 +1,28 @@
+_id: ut_8e58567056bf4aec92ef22dcaa186944
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629058127
+created: 1708629058127
+requestId: req_ee03fb60f8064978bc5c3dfeedf3f67d
+name: "Test: Place an order for a pet"
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  // Parse the response body as JSON
+  const body = JSON.parse(response.data);
+
+  // Assert that the response status is 200
+  expect(response.status).to.equal(200);
+
+  // Assert that the response body has the expected properties
+  expect(body).to.have.property('id').that.is.a('number');
+  expect(body).to.have.property('petId').that.is.a('number');
+  expect(body).to.have.property('quantity').that.is.a('number');
+  expect(body).to.have.property('shipDate').that.is.a('string');
+  expect(body).to.have.property('status').that.is.a('string');
+  expect(body).to.have.property('complete').that.is.a('boolean');
+
+  // Assert that the response time is less than 2000ms
+  expect(response.responseTime).to.be.below(2000);

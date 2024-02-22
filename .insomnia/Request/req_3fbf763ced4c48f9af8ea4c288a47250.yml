@@ -1,0 +1,27 @@
+_id: req_3fbf763ced4c48f9af8ea4c288a47250
+type: Request
+parentId: fld_284959bb737b4fa99294b801063a9365
+modified: 1708628991250
+created: 1708628991250
+url: "{{ _.base_url }}/user/login"
+name: Logs user into the system
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: username
+    disabled: false
+    value: string
+  - name: password
+    disabled: false
+    value: string
+headers: []
+authentication: {}
+metaSortKey: -1708628991250
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

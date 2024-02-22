@@ -1,0 +1,53 @@
+_id: ut_27c2285343534bafb77170cf31e8233f
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629060909
+created: 1708629060909
+requestId: req_212486ad1aa8404dbac818ed38448c3b
+name: Create user
+code: >-
+  // Auto-generated with Insomnia AI
+
+
+  const response = await insomnia.send();
+
+
+  // Parse the JSON response
+
+  const data = JSON.parse(response.data);
+
+
+  // Assert the response status code
+
+  expect(response.status).to.equal(200);
+
+
+  // Assert the response status message
+
+  expect(response.statusMessage).to.equal('OK');
+
+
+  // Assert the response headers
+
+  expect(response.headers).to.have.property('content-type').to.equal('application/json');
+
+
+  // Assert the response body
+
+  expect(data).to.be.an('object');
+
+  expect(data).to.have.property('id').to.be.a('number');
+
+  expect(data).to.have.property('username').to.be.a('string');
+
+  expect(data).to.have.property('firstName').to.be.a('string');
+
+  expect(data).to.have.property('lastName').to.be.a('string');
+
+  expect(data).to.have.property('email').to.be.a('string');
+
+  expect(data).to.have.property('password').to.be.a('string');
+
+  expect(data).to.have.property('phone').to.be.a('string');
+
+  expect(data).to.have.property('userStatus').to.be.a('number');

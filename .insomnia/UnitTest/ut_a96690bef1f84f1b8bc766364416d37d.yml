@@ -1,0 +1,24 @@
+_id: ut_a96690bef1f84f1b8bc766364416d37d
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629040452
+created: 1708629040452
+requestId: req_0fb83fc9e6534ab28be9a7d74348c724
+name: Delete purchase order by ID
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  // Check the status code
+  expect(response.status).to.equal(200);
+
+  // Check the response time
+  expect(response.responseTime).to.be.a('number');
+
+  // Check the response body
+  const data = JSON.parse(response.data);
+  expect(data).to.be.an('object');
+
+  // Check the response headers
+  expect(response.headers).to.be.an('object');

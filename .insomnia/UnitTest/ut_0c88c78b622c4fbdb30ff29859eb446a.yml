@@ -1,0 +1,41 @@
+_id: ut_0c88c78b622c4fbdb30ff29859eb446a
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629046870
+created: 1708629046870
+requestId: req_5d6f101aca7d44e786108095f0f31e6f
+name: Add a new pet to the store
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  // Parse the response body as JSON
+  const body = JSON.parse(response.data);
+
+  // Assert that the HTTP status code is 200
+  expect(response.status).to.equal(200);
+
+  // Assert that the response body has a 'name' property
+  expect(body).to.have.property('name');
+
+  // Assert that the 'name' property is a string
+  expect(body.name).to.be.a('string');
+
+  // Assert that the response body has a 'status' property
+  expect(body).to.have.property('status');
+
+  // Assert that the 'status' property is a string
+  expect(body.status).to.be.a('string');
+
+  // Assert that the response body has a 'photoUrls' property
+  expect(body).to.have.property('photoUrls');
+
+  // Assert that the 'photoUrls' property is an array
+  expect(body.photoUrls).to.be.an('array');
+
+  // Assert that the response body has a 'tags' property
+  expect(body).to.have.property('tags');
+
+  // Assert that the 'tags' property is an array
+  expect(body.tags).to.be.an('array');

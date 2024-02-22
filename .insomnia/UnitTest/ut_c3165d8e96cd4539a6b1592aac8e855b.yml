@@ -1,0 +1,25 @@
+_id: ut_c3165d8e96cd4539a6b1592aac8e855b
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629026502
+created: 1708629026502
+requestId: req_9fbc93097be642c8b1447447d683ecba
+name: Find pet by ID
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  expect(response.status).to.equal(200);
+
+  let data = JSON.parse(response.data);
+
+  expect(data).to.be.an('object');
+
+  expect(data).to.have.property('id');
+
+  expect(data.id).to.be.a('string');
+
+  expect(data).to.have.property('name');
+
+  expect(data.name).to.be.a('string');

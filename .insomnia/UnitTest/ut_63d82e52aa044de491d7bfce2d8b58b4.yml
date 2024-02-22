@@ -1,0 +1,32 @@
+_id: ut_63d82e52aa044de491d7bfce2d8b58b4
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629043906
+created: 1708629043906
+requestId: req_9be2f16bc0bb4b128a6de565a972a363
+name: Get user by user name
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  // Parse the response body as JSON
+  const body = JSON.parse(response.data);
+
+  // Assert the status code
+  expect(response.status).to.equal(200);
+
+  // Assert the response time
+  expect(response.responseTime).to.be.a('number');
+
+  // Assert the existence of specific properties in the response body
+  expect(body).to.have.property('username');
+  expect(body).to.have.property('email');
+  expect(body).to.have.property('firstName');
+  expect(body).to.have.property('lastName');
+
+  // Assert the type of specific properties in the response body
+  expect(body.username).to.be.a('string');
+  expect(body.email).to.be.a('string');
+  expect(body.firstName).to.be.a('string');
+  expect(body.lastName).to.be.a('string');

@@ -1,0 +1,29 @@
+_id: ut_7903811a48c240d39d610de6b1a0864d
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629038139
+created: 1708629038139
+requestId: req_568944de2fdc4c41b0cce9b82a4f8819
+name: Updates a pet in the store with form data
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  // Parse the response body as JSON
+  const body = JSON.parse(response.data);
+
+  // Assert that the status code is 200
+  expect(response.status).to.equal(200);
+
+  // Assert that the response time is less than 2000ms
+  expect(response.responseTime).to.be.below(2000);
+
+  // Assert that the response headers include 'Content-Type: application/json'
+  expect(response.headers['Content-Type']).to.include('application/json');
+
+  // Assert that the body has a 'name' property
+  expect(body).to.have.property('name');
+
+  // Assert that the body has a 'parentId' property
+  expect(body).to.have.property('parentId');

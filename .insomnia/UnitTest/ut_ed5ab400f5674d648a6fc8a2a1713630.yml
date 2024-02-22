@@ -1,0 +1,30 @@
+_id: ut_ed5ab400f5674d648a6fc8a2a1713630
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629031882
+created: 1708629031882
+requestId: req_165005d28137480c8ad92ea689025822
+name: Test User Login
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  // Parse the response body
+  const body = JSON.parse(response.data);
+
+  // Check the status code
+  expect(response.status).to.equal(200);
+
+  // Check the status message
+  expect(response.statusMessage).to.equal('OK');
+
+  // Check the response time
+  expect(response.responseTime).to.be.a('number');
+
+  // Check the headers
+  expect(response.headers).to.have.property('X-Rate-Limit');
+  expect(response.headers).to.have.property('X-Expires-After');
+
+  // Check the body
+  expect(body).to.be.a('string');

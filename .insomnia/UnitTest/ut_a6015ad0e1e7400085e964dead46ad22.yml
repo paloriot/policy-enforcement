@@ -1,0 +1,55 @@
+_id: ut_a6015ad0e1e7400085e964dead46ad22
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629035601
+created: 1708629035601
+requestId: req_709b6706f86840bb8c5a03f275fbc49a
+name: Test for createUsersWithArrayInput
+code: >-
+  // Auto-generated with Insomnia AI
+
+
+  const response = await insomnia.send();
+
+
+  // Parse the JSON response
+
+  const data = JSON.parse(response.data);
+
+
+  // Check the HTTP status code
+
+  expect(response.status).to.equal(200);
+
+
+  // Check the response time
+
+  expect(response.responseTime).to.be.below(2000);
+
+
+  // Check the response headers
+
+  expect(response.headers).to.have.property('content-type').that.includes('application/json');
+
+
+  // Check the response body
+
+  expect(data).to.be.an('array');
+
+  expect(data[0]).to.be.an('object');
+
+  expect(data[0]).to.have.property('id').that.is.a('number');
+
+  expect(data[0]).to.have.property('username').that.is.a('string');
+
+  expect(data[0]).to.have.property('firstName').that.is.a('string');
+
+  expect(data[0]).to.have.property('lastName').that.is.a('string');
+
+  expect(data[0]).to.have.property('email').that.is.a('string');
+
+  expect(data[0]).to.have.property('password').that.is.a('string');
+
+  expect(data[0]).to.have.property('phone').that.is.a('string');
+
+  expect(data[0]).to.have.property('userStatus').that.is.a('number');

@@ -1,0 +1,40 @@
+_id: ut_a9782a4e2ceb47e98783eaba9b4cf6ea
+type: UnitTest
+parentId: uts_d4583e1c96c04cb9bcaecc35ac7cc81a
+modified: 1708629043168
+created: 1708629043168
+requestId: req_132e11d2621b45f5bb9caa5c28b3417c
+name: Test for User Logout
+code: |-
+  // Auto-generated with Insomnia AI
+
+  const response = await insomnia.send();
+
+  // Parse the JSON response
+  const data = JSON.parse(response.data);
+
+  // Check the HTTP status code
+  expect(response.status).to.equal(200);
+
+  // Check the HTTP status message
+  expect(response.statusMessage).to.equal('OK');
+
+  // Check the response time
+  expect(response.responseTime).to.be.below(2000);
+
+  // Check that the response body is not empty
+  expect(data).to.not.be.empty;
+
+  // Check that the response body has the expected properties
+  expect(data).to.have.property('message');
+  expect(data).to.have.property('status');
+
+  // Check the values of the properties
+  expect(data.message).to.be.a('string');
+  expect(data.status).to.be.a('string');
+
+  // Check that the status is 'success'
+  expect(data.status).to.equal('success');
+
+  // Check that the message is 'User logged out successfully'
+  expect(data.message).to.equal('User logged out successfully');
